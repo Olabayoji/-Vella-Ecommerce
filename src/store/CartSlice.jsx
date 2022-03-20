@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const SAVEDCART = sessionStorage.getItem("myCart");
-console.log(SAVEDCART);
+// console.log(SAVEDCART);
 
 const defaultFormData = {
   firstName: "",
@@ -48,7 +48,7 @@ const CartSlice = createSlice({
         state.items = cart;
         // console.log(sessionStorage.getItem("myCart"));
       } else {
-        console.log("new");
+        // console.log("new");
         const product = action.payload;
         cart = [...state.items];
         cart.push({ ...product, qty: 1 });
@@ -68,7 +68,7 @@ const CartSlice = createSlice({
       );
     },
     deleteFromCart: (state, action) => {
-      console.log("delete");
+      // console.log("delete");
       const product = action.payload;
       const existIndex = state.items.findIndex(
         (item) => item.id === product.id

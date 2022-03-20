@@ -20,7 +20,7 @@ function CartOverview(props) {
   ));
 
   const show = data.checkedOut;
-  console.log(show);
+  // console.log(show);
 
   const empty = (
     <div className="text-center mt-4 font-semibold text-lg">
@@ -30,7 +30,7 @@ function CartOverview(props) {
   return (
     <>
       {show && <Success />}
-      <div className="min-h-screen">
+      <div className="min-h-my_fit">
         <div className="">
           <h2 className="  ml-8 font-bold text-xl md:text-2xl lg:text-3xl ">
             Cart
